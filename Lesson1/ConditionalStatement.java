@@ -30,29 +30,3 @@ public class ConditionalStatement {
 
 
 
-
-/*
-		if(youMale = m) {
-			System.out.println("То Вы мужчина");
-		}
-
-		if(youNotMale = f) {
-			System.out.println("То Вы женщина");
-		}
-
-		if(yourHeight < 1.80) {
-			System.out.println("Не высокий");
-		} else {
-			System.out.println("Высокий");
-		}
-
-		if(yourNameStartsWithLetterM == 'М') {
-			System.out.println("Ваше имя М");
-		} else if(yourNameStartsWithLetterI == 'И') {
-			System.out.println("Ваше имя И");
-		}
-		else {
-			System.out.println("Вас зовут по другому");
-		}*/
-	}
-}
