@@ -7,14 +7,13 @@ public class MyFirstGame {
 			Scanner scan = new Scanner(System.in);
 			System.out.println("Угадай число");
 			
-			do {
+			while(j != i) {
 				j = scan.nextInt();
 				if(j > i) {
 					System.out.println("Введенное вами число больше того, что загадал компьютер");
 				} else if (j < i) {
 					System.out.println("Введенное вами число меньше того, что загадал компьютер");
 				}
-			} while(j != i);
-			System.out.println("Вы угадали!");
+			} System.out.println("Вы угадали!");
 	} 
 }
