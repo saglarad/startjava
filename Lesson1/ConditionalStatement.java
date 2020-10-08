@@ -1,13 +1,13 @@
 public class ConditionalStatement {
 	public static void main(String[] args) {
-		int yourAge = 35;
-		if(yourAge > 20) {
+		int age = 35;
+		if(age > 20) {
 			System.out.println("Вы взрослый");
 		}
 
 		char sex = 'F';
 		if(sex == 'M') {
-			System.out.println ("Вы мужчина");
+			System.out.println("Вы мужчина");
 		} else {
 			System.out.println("Вы женщина");
 		}
@@ -19,14 +19,11 @@ public class ConditionalStatement {
 			System.out.println("Вы высокий");
 		}
 
-		char yourName = 'S';
-		if(yourName == 'M') {
+		char name = 'S';
+		if(name == 'M') {
 			System.out.println("Ваше имя начинается с буквы М");
-		} else if(yourName == 'I') {
+		} else if(name == 'I') {
 			System.out.println("Ваше имя начинается с буквы И");
 		} else {
 			System.out.println("Ваше имя начинается с другой буквы");
 		}
-
-
-
