@@ -10,16 +10,15 @@ public class Cycle {
 			i -= 2;
 		}
 
-		int i = 10;
-		int 0 = 0;
+		int j = 10;
+		int sumOdd = 0;
 		do {
-			i++;
-			if(i % 2 == 1) {
-				sumOdd += i;
+			j++;
+			if(j % 2 == 1) {
+				sumOdd += j;
 				System.out.println(sumOdd);
 			} 
-		} while(i < 20);
+		} while(j < 20);
 		System.out.println("11 + 13 + 15 + 17 + 19 =" + sumOdd);
 	}
 }
-
