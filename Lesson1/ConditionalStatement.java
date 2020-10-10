@@ -19,11 +19,13 @@ public class ConditionalStatement {
 			System.out.println("Вы высокий");
 		}
 
-		char name = 'S';
-		if(name == 'M') {
+		char firstLetterOfTheName = 'M';
+		if(firstLetterOfTheName == 'M') {
 			System.out.println("Ваше имя начинается с буквы М");
-		} else if(name == 'I') {
+		} else if(firstLetterOfTheName == 'I') {
 			System.out.println("Ваше имя начинается с буквы И");
 		} else {
 			System.out.println("Ваше имя начинается с другой буквы");
 		}
+	}
+}

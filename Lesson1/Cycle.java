@@ -16,9 +16,8 @@ public class Cycle {
 			j++;
 			if(j % 2 == 1) {
 				sumOdd += j;
-				System.out.println(sumOdd);
-			} 
+			}
 		} while(j < 20);
-		System.out.println("11 + 13 + 15 + 17 + 19 =" + sumOdd);
+		System.out.println("11 + 13 + 15 + 17 + 19 = " + sumOdd);
 	}
 }

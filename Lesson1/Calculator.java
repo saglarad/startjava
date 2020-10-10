@@ -1,9 +1,10 @@
 import java.util.Scanner;
+
 public class Calculator {
 	public static void main(String[] args) {
 		int a = 5;
 		int b = 2;
-		char sign = '7';
+		char sign = ' ';
 		Scanner scan = new Scanner(System.in);
 
 		while(sign != 'x') {
@@ -18,11 +19,9 @@ public class Calculator {
 			} else if (sign == '/') {
 				System.out.println(a / b);
 			} else if (sign == '^') {
-				System.out.println(Math.pow(a, b));
+				System.out.println(a*a);
 			} else if (sign == '%') {
 				System.out.println(a % b);
-			} else {
-				System.out.println("Не математический знак");
 			}
 		}
 	}
