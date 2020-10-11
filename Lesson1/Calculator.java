@@ -19,7 +19,11 @@ public class Calculator {
 			} else if (sign == '/') {
 				System.out.println(a / b);
 			} else if (sign == '^') {
-				System.out.println(a * a);
+				int result = 1;
+				for(int i = 0; i < b; i++) {
+				result = result * a;
+				}
+				System.out.println(result);
 			} else if (sign == '%') {
 				System.out.println(a % b);
 			}
