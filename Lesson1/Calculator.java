@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Calculator {
 	public static void main(String[] args) {
 		int a = 5;
-		int b = 2;
+		int b = 5;
 		char sign = ' ';
 		Scanner scan = new Scanner(System.in);
 
@@ -21,7 +21,7 @@ public class Calculator {
 			} else if (sign == '^') {
 				int result = 1;
 				for(int i = 0; i < b; i++) {
-				result = result * a;
+					result *= a;
 				}
 				System.out.println(result);
 			} else if (sign == '%') {
