@@ -1,4 +1,4 @@
-public class Unicode{
+public class Unicode {
 	public static void main(String[] args) {
 		int start = 9398;
 		int finish = 10178;
