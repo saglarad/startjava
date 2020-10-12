@@ -14,7 +14,7 @@ public class MyFirstGame {
 			} else if (userNamber < computerNumber) {
 				System.out.println("Введенное вами число меньше того, что загадал компьютер");
 			}
-			}
-			System.out.println("Вы угадали!");
+		}
+		System.out.println("Вы угадали!");
 	} 
 }
