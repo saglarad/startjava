@@ -22,6 +22,7 @@ public class Person {
 	void speak() {
 
 	}
+	
 	boolean learnJava() {
 		System.out.println("Изучает StartJava");
 		return true;
