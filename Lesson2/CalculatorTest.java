@@ -7,8 +7,9 @@ public class CalculatorTest {
 		Scanner scanner = new Scanner(System.in);
 
 		String answer = "yes";
+		boolean isRun = true;
 
-		while(answer != "no") {
+		while(isRun == true) {
 			System.out.print("Введите первое число: ");
 			int firstNumber = scanner.nextInt();
 			calculatorOne.setFirstNumber(firstNumber);
@@ -27,7 +28,17 @@ public class CalculatorTest {
 			System.out.println("Результат: " + calculatorOne.getResult());
 
 			System.out.println("Хотите продолжить? [yes/no]");
-			answer = scanner.nextLine();
+			answer = scanner.next();
+
+			switch(answer) {
+				case "no" :
+				isRun = false;
+				break;
+
+				case "yes" :
+				isRun = true;
+				break;
+			}
 		}
 	}
 }
