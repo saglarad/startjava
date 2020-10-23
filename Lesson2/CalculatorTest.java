@@ -27,9 +27,7 @@ public class CalculatorTest {
 
 				System.out.println("Хотите продолжить? [yes/no]");
 				answer = scanner.nextLine();
-			}
-			
-			else {
+			} else {
 				System.out.println("Хотите продолжить? [yes/no]");
 				answer = scanner.nextLine();
 			}
