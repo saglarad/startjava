@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Calculator {
 
-	Scanner scanner = new Scanner(System.in);
 	private int firstNumber;
 	private int secondNumber;
 	private char mathOperation;
@@ -21,14 +20,10 @@ public class Calculator {
 	}
 
 	public void setSecondNumber(int secondNumber) {
-		this.secondNumber =secondNumber;
+		this.secondNumber = secondNumber;
 	}
 
-	public char getMathOperation() {
-		return mathOperation;
-	}
-
-	public void setResult(char mathOperation) {
+	public void calculate(char mathOperation) {
 		switch (mathOperation) {
 			case '+' :
 				result = firstNumber + secondNumber;
