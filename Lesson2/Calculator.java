@@ -23,8 +23,9 @@ public class Calculator {
 		this.secondNumber = secondNumber;
 	}
 
-	public void calculate(char mathOperation) {
+	public char calculate() {
 		switch (mathOperation) {
+			// 
 			case '+' :
 				result = firstNumber + secondNumber;
 				break;
@@ -47,9 +48,6 @@ public class Calculator {
 			case '%' :
 				result = firstNumber % secondNumber;
 		}
-	}
-
-	public int getResult() {
-		return result;
+		return mathOperation;
 	}
 }
