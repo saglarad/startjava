@@ -4,7 +4,6 @@ public class Calculator {
 
 	private int firstNumber;
 	private int secondNumber;
-	// private char mathOperation;
 	private int result;
 
 	public int getFirstNumber() {
