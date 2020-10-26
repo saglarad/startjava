@@ -11,19 +11,18 @@ public class CalculatorTest {
 				System.out.print("Введите первое число: ");
 				int firstNumber = scan.nextInt();
 				calc.setFirstNumber(firstNumber);
+
 				System.out.print("\nВведите знак математической операции: ");
 				char mathOperation = scan.next().charAt(0);
-				System.out.println("");
-				System.out.print("Введите второе число: ");
+
+				System.out.print("\nВведите второе число: ");
 				int secondNumber = scan.nextInt();
 				calc.setSecondNumber(secondNumber);
-				calc.calculate();
-				System.out.println("Результат: " + calc.calculate());
-				answer = scan.nextLine();
-			} else {
-				System.out.println("Хотите продолжить? [yes/no]");
-				answer = scan.nextLine();
+
+				System.out.println("Результат: " + calc.calculate(mathOperation));
 			}
+			System.out.println("Хотите продолжить? [yes/no]");
+			answer = scan.next();
 		}
 	}
 }

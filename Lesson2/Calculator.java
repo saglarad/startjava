@@ -4,7 +4,7 @@ public class Calculator {
 
 	private int firstNumber;
 	private int secondNumber;
-	private char mathOperation;
+	// private char mathOperation;
 	private int result;
 
 	public int getFirstNumber() {
@@ -23,31 +23,25 @@ public class Calculator {
 		this.secondNumber = secondNumber;
 	}
 
-	public char calculate() {
+	public int calculate(char mathOperation) {
 		switch (mathOperation) {
-			// 
 			case '+' :
-				result = firstNumber + secondNumber;
-				break;
+				return firstNumber + secondNumber;
 			case '-' :
-				result = firstNumber - secondNumber;
-				break;
+				return firstNumber - secondNumber;
 			case '*' :
-				result = firstNumber * secondNumber;
-				break;
+				return firstNumber * secondNumber;
 			case '/' :
-				result = firstNumber / secondNumber;
-				break;
+				return firstNumber / secondNumber;
 			case '^' :
 				int result = 1;
 				for(int i = 0; i < secondNumber; i++) {
 					result *= firstNumber;
 				}
-				result = result;
-				break;
+				return result;
 			case '%' :
-				result = firstNumber % secondNumber;
+				return firstNumber % secondNumber;
 		}
-		return mathOperation;
+		return 0;
 	}
 }
