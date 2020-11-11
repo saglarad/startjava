@@ -10,18 +10,17 @@ public class GuessNumberTest {
 		System.out.println("Угадай число");
 
 		System.out.println("Введите имя первого игрока: ");
-		Player player1 = new Player(scan.nextLine());
+		Player playerOne = new Player(scan.nextLine());
 
 		System.out.println("Введите имя второго игрока: ");
-		Player player2 = new Player(scan.nextLine());
+		Player playerTwo = new Player(scan.nextLine());
 
-		GuessNumber guessNumber = new GuessNumber(player1, player2);
+		GuessNumber guessNumber = new GuessNumber(playerOne, playerTwo);
 
 		while(!answer.equals("no")) {
 			if(answer.equals("yes")) {
 				guessNumber.play();
 			}
-
 			System.out.println("Хотите продолжить? [yes/no]");
 			answer = scan.next();
 		}
