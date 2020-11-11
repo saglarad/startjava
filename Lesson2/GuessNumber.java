@@ -35,15 +35,21 @@ public class GuessNumber {
 		computerNumber = (int)(Math.random() * 100);
 		System.out.println("Компьютер загадал число: " + computerNumber);
 
-		while(true) {
-			enterNumber(playerOne);
-			enterNumber(playerTwo);
-			int numberPlayerOne = compare(playerOne);
-			int numberPlayerTwo = compare(playerTwo);
+		boolean finish = false;
+
+		while(!finish) {
+			System.out.print("Число игрока " + playerOne.getName() + " ");
+			playerOne.setNumber(scan.nextInt());
 			if(computerNumber == compare(playerOne)) {
 				break;
-			} else if(computerNumber == compare(playerTwo)) {
-				break;
+			}
+			
+			if (!finish) {
+				System.out.print("\nЧисло игрока " + playerTwo.getName() + " ");
+				playerTwo.setNumber(scan.nextInt());
+				if(computerNumber == compare(playerTwo)) {
+					break;
+				}
 			}
 		}
 	}
