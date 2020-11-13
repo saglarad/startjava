@@ -13,10 +13,33 @@ public class GuessNumber {
 		this.playerTwo = playerTwo;
 	}
 
+	public void play() {
+		computerNumber = (int)(Math.random() * 100);
+		System.out.println("Компьютер загадал число: " + computerNumber);
+
+		boolean finish = false;
+
+		while(true) {
+			enterNumber(playerOne);
+			if(computerNumber == compare(playerOne)) {
+				break;
+			}
+
+			if (true) {
+				enterNumber(playerTwo);
+				if(computerNumber == compare(playerTwo)) {
+					break;
+				}
+			}
+		}
+	}
+
 	public void enterNumber(Player player) {
 		System.out.println("Введите число " + player.getName());
 		player.setNumber(scan.nextInt());
 	}
+
+	boolean compare = false;
 
 	public int compare(Player player) {
 		int number = player.getNumber();
@@ -29,28 +52,5 @@ public class GuessNumber {
 			System.out.println("Введенное вами число меньше того, что загадал компьютер");
 		}
 		return number;
-	}
-
-	public void play() {
-		computerNumber = (int)(Math.random() * 100);
-		System.out.println("Компьютер загадал число: " + computerNumber);
-
-		boolean finish = false;
-
-		while(!finish) {
-			System.out.print("Число игрока " + playerOne.getName() + " ");
-			playerOne.setNumber(scan.nextInt());
-			if(computerNumber == compare(playerOne)) {
-				break;
-			}
-			
-			if (!finish) {
-				System.out.print("\nЧисло игрока " + playerTwo.getName() + " ");
-				playerTwo.setNumber(scan.nextInt());
-				if(computerNumber == compare(playerTwo)) {
-					break;
-				}
-			}
-		}
 	}
 }
