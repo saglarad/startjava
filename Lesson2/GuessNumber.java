@@ -17,17 +17,15 @@ public class GuessNumber {
 		computerNumber = (int)(Math.random() * 100);
 		System.out.println("Компьютер загадал число: " + computerNumber);
 
-		boolean finish = false;
-
 		while(true) {
 			enterNumber(playerOne);
-			if(computerNumber == compare(playerOne)) {
+			if(compare(playerOne)) {
 				break;
 			}
 
 			if (true) {
 				enterNumber(playerTwo);
-				if(computerNumber == compare(playerTwo)) {
+				if(compare(playerTwo)) {
 					break;
 				}
 			}
@@ -41,16 +39,15 @@ public class GuessNumber {
 
 	boolean compare = false;
 
-	public int compare(Player player) {
-		int number = player.getNumber();
-		String name = player.getName();
-		if(number == computerNumber) {
+	public boolean compare(Player player) {
+		if(player.getNumber() == computerNumber) {
 			System.out.println("Победил игрок по имени: " + player.getName());
-		} if(number > computerNumber) {
+			return true;
+		} if(player.getNumber() > computerNumber) {
 			System.out.println("Введенное вами число больше того, что загадал компьютер");
-		} else if(number < computerNumber) {
+		} else if(player.getNumber() < computerNumber) {
 			System.out.println("Введенное вами число меньше того, что загадал компьютер");
 		}
-		return number;
+		return false;
 	}
 }
