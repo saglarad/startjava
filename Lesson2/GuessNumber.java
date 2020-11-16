@@ -14,30 +14,22 @@ public class GuessNumber {
 	}
 
 	public void play() {
-		computerNumber = (int)(Math.random() * 100);
+		computerNumber = (int) (Math.random() * 100);
 		System.out.println("Компьютер загадал число: " + computerNumber);
 
-		while(true) {
+		do {
 			enterNumber(playerOne);
-			if(compare(playerOne)) {
+			if (compare(playerOne)) {
 				break;
 			}
-
-			if (true) {
-				enterNumber(playerTwo);
-				if(compare(playerTwo)) {
-					break;
-				}
-			}
-		}
+			enterNumber(playerTwo);
+		} while(!compare(playerTwo));
 	}
 
 	public void enterNumber(Player player) {
 		System.out.println("Введите число " + player.getName());
 		player.setNumber(scan.nextInt());
 	}
-
-	boolean compare = false;
 
 	public boolean compare(Player player) {
 		if(player.getNumber() == computerNumber) {
