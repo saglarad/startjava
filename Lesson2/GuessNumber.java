@@ -35,7 +35,8 @@ public class GuessNumber {
 		if(player.getNumber() == computerNumber) {
 			System.out.println("Победил игрок по имени: " + player.getName());
 			return true;
-		} System.out.println(player.getNumber() > computerNumber ? "Введенное вами число больше того, что загадал компьютер" : "Введенное вами число меньше того, что загадал компьютер");
+		}
+		System.out.println("Введенное вами число " + (player.getNumber() > computerNumber ? "больше" : "меньше") + " того, что загадал компьютер");
 		return false;
 	}
 }
