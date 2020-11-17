@@ -26,20 +26,16 @@ public class GuessNumber {
 		} while(!compare(playerTwo));
 	}
 
-	public void enterNumber(Player player) {
+	private void enterNumber(Player player) {
 		System.out.println("Введите число " + player.getName());
 		player.setNumber(scan.nextInt());
 	}
 
-	public boolean compare(Player player) {
+	private boolean compare(Player player) {
 		if(player.getNumber() == computerNumber) {
 			System.out.println("Победил игрок по имени: " + player.getName());
 			return true;
-		} if(player.getNumber() > computerNumber) {
-			System.out.println("Введенное вами число больше того, что загадал компьютер");
-		} else if(player.getNumber() < computerNumber) {
-			System.out.println("Введенное вами число меньше того, что загадал компьютер");
-		}
+		} System.out.println(player.getNumber() > computerNumber ? "Введенное вами число больше того, что загадал компьютер" : "Введенное вами число меньше того, что загадал компьютер");
 		return false;
 	}
 }
