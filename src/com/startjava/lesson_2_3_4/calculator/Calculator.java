@@ -1,6 +1,4 @@
-package com.startjava.lesson_2_3.calculator;
-
-import java.util.Scanner;
+package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
 
@@ -35,11 +33,7 @@ public class Calculator {
 			case '/' :
 				return firstNumber / secondNumber;
 			case '^' :
-				int result = 1;
-				for(int i = 0; i < secondNumber; i++) {
-					result *= firstNumber;
-				}
-				return result;
+				return (int) Math.pow(firstNumber, secondNumber);
 			case '%' :
 				return firstNumber % secondNumber;
 		}
