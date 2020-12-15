@@ -22,19 +22,21 @@ public class Calculator {
 		this.secondNumber = secondNumber;
 	}
 
-	public int calculate(char mathOperation) {
+
+
+	public int calculate(String mathOperation) {
 		switch (mathOperation) {
-			case '+' :
+			case "+":
 				return firstNumber + secondNumber;
-			case '-' :
+			case "-":
 				return firstNumber - secondNumber;
-			case '*' :
+			case "*":
 				return firstNumber * secondNumber;
-			case '/' :
+			case "/":
 				return firstNumber / secondNumber;
-			case '^' :
+			case "^":
 				return (int) Math.pow(firstNumber, secondNumber);
-			case '%' :
+			case "%":
 				return firstNumber % secondNumber;
 		}
 		return 0;
