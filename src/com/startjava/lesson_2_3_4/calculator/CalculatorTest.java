@@ -11,24 +11,13 @@ public class CalculatorTest {
 		while(!answer.equals("no")) {
 			if(answer.equals("yes")) {
 				System.out.println("Введите математическое выражение");
-				String calc1 = scan.nextLine();
-				String [] parts = calc1.split(" ");
-				int firstNumber = Integer.parseInt(parts[0]);
-				int secondNumber = Integer.parseInt(parts[1]);
+				String expression = scan.next();
+				String[] number = expression.split("[+\\-\\*/]");
+				int firstNumber = Integer.parseInt(number[0]);
+				String mathOperation = number[0];
+				int secondNumber = Integer.parseInt(number[0]);
 				int result;
-				String mathOperation = parts[2];
 
-
-//				System.out.print("Введите первое число: ");
-//				int firstNumber = scan.nextInt();
-//				calc.setFirstNumber(firstNumber);
-//
-//				System.out.print("\nВведите знак математической операции: ");
-//				char mathOperation = scan.next().charAt(0);
-//
-//				System.out.print("\nВведите второе число: ");
-//				int secondNumber = scan.nextInt();
-//				calc.setSecondNumber(secondNumber);
 
 				System.out.println("Результат: " + calc.calculate(mathOperation));
 			}

@@ -1,28 +1,10 @@
 package com.startjava.lesson_2_3_4.calculator;
-
+import java.util.Scanner;
 public class Calculator {
-
+	Scanner scan = new Scanner(System.in);
 	private int firstNumber;
 	private int secondNumber;
 	private int result;
-
-	public int getFirstNumber() {
-		return firstNumber;
-	}
-
-	public void setFirstNumber(int firstNumber) {
-		this.firstNumber = firstNumber;
-	}
-
-	public int getSecondNumber() {
-		return secondNumber;
-	}
-
-	public void setSecondNumber(int secondNumber) {
-		this.secondNumber = secondNumber;
-	}
-
-
 
 	public int calculate(String mathOperation) {
 		switch (mathOperation) {
@@ -38,6 +20,9 @@ public class Calculator {
 				return (int) Math.pow(firstNumber, secondNumber);
 			case "%":
 				return firstNumber % secondNumber;
+
+			default:
+				System.out.println("Неверный знак");
 		}
 		return 0;
 	}
