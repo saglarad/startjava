@@ -7,22 +7,15 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		Scanner scan = new Scanner(System.in);
 		String answer = "yes";
-		
+
 		while(!answer.equals("no")) {
 			if(answer.equals("yes")) {
 				System.out.println("Введите математическое выражение");
-				String expression = scan.next();
-				String[] number = expression.split("[+\\-\\*/]");
-				int firstNumber = Integer.parseInt(number[0]);
-				String mathOperation = number[0];
-				int secondNumber = Integer.parseInt(number[0]);
-				int result;
-
-
-				System.out.println("Результат: " + calc.calculate(mathOperation));
+				String expression = scan.nextLine();
+				System.out.println("Результат: " + calc.calculate(expression));
 			}
 			System.out.println("Хотите продолжить? [yes/no]");
-			answer = scan.next();
+			answer = scan.nextLine();
 		}
 	}
 }
