@@ -15,7 +15,8 @@ public class GuessNumber {
 	}
 
 	public void play() {
-		computerNumber = (int) (Math.random() * 100);
+		computerNumber = (int) (Math.random() * 101);
+
 		System.out.println("Компьютер загадал число: " + computerNumber);
 		System.out.println("У Вас 10 попыток");
 		do {

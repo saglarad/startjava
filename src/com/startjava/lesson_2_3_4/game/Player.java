@@ -21,8 +21,7 @@ public class Player {
 	}
 
 	public int getNumber() {
-		int currentElementIndex = attempts-1;
-		return numbers[currentElementIndex];
+		return numbers[attempts-1];
 	}
 
 	public void setNumber(int number) {
@@ -56,5 +55,4 @@ public class Player {
 		}
 		return numbersStr.toString();
 	}
-
 }
