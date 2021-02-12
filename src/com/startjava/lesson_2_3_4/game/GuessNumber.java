@@ -25,7 +25,9 @@ public class GuessNumber {
 				break;
 			}
 			enterNumber(playerTwo);
-			compare(playerTwo);
+			if (compare(playerTwo)){
+				break;
+			}
 		} while(!playerOne.isAttemptsEnd() && !playerTwo.isAttemptsEnd());
 		playerOne.clearNumbers();
 		playerTwo.clearNumbers();
@@ -40,15 +42,17 @@ public class GuessNumber {
 		if(player.getNumber() == computerNumber) {
 			System.out.println("Игрок " + player.getName() + " угадал число " + computerNumber + " с " + player.getAttempts() + " попытки");
 			return true;
+		} else {
+			System.out.println("Введенное вами число " + (player.getNumber() > computerNumber ? "больше" : "меньше") + " того, что загадал компьютер");
 		}
+		return false;
+	}
+	public  boolean displayAttempts(Player playerOne, Player playerTwo){
 		if (playerOne.isAttemptsEnd() && playerTwo.isAttemptsEnd()) {
 			System.out.println("У " + playerOne.getName() + " закончились попытки");
 			System.out.println(playerOne.displayAttempts());
 			System.out.println("У " + playerTwo.getName() + " закончились попытки");
 			System.out.println(playerTwo.displayAttempts());
-		} else {
-			System.out.println("Введенное вами число " + (player.getNumber() > computerNumber ? "больше" : "меньше") + " того, что загадал компьютер");
-		}
-		return false;
+		} return false;
 	}
 }
