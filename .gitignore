@@ -1,6 +1,4 @@
 *.class
-/.idea/vcs.xml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/.gitignore
-/StartJava.iml
+.idea
+StartJava.iml
+out

@@ -21,7 +21,7 @@ public class Player {
 	}
 
 	public int getNumber() {
-		return numbers[attempts-1];
+		return numbers[attempts - 1];
 	}
 
 	public void setNumber(int number) {
@@ -44,15 +44,6 @@ public class Player {
 		return attempts;
 	}
 
-	public String displayAttempts() {
-		StringBuilder numbersStr = new StringBuilder();
-		int[] numbersTemp = getNumbers();
-		for (int i = 0; i < attempts; i++) {
-			numbersStr.append(numbersTemp[i]);
-			if (i < attempts) {
-				numbersStr.append(" ");
-			}
-		}
-		return numbersStr.toString();
+	public void setNumber() {
 	}
 }
