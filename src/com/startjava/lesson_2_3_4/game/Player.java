@@ -43,7 +43,4 @@ public class Player {
 	public int getAttempts() {
 		return attempts;
 	}
-
-	public void setNumber() {
-	}
 }
