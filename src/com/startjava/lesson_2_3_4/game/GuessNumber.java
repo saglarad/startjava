@@ -1,7 +1,6 @@
 package com.startjava.lesson_2_3_4.game;
 
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class GuessNumber {
     private Player playerOne;
@@ -19,49 +18,39 @@ public class GuessNumber {
         System.out.println("Компьютер загадал число: " + randomNumber);
         System.out.println("У Вас 10 попыток");
         while (true) {
-            if(makeMove(playerOne)) {
+            if (makeMove(playerOne)) {
                 break;
             }
             if (makeMove(playerTwo)) {
                 break;
             }
+            if (isAttemptsEnd()) {
+                break;
+            }
+            System.out.println("Ни один из игроков не угадал. Следующий ход");
         }
         resetGame();
     }
 
     private boolean makeMove(Player player) {
-        enterNumber(playerOne);
-        if (compareNumber(playerOne)) {
-            return false;
+        enterNumber(player);
+        if (isNumberGuessedBy(player)) {
+            return true;
         }
 
-        enterNumber(playerTwo);
-        if (compareNumber(playerTwo)) {
-            return false;
+        if (player.isAttemptsEnd()) {
+            System.out.println("У " + player.getName() + " закончились попытки");
+            displayAttempts(player);
         }
-
-        if (isGameEnd()) {
-            if (isGameEnd()) {
-            System.out.println("У " + playerOne.getName() + " закончились попытки");
-            System.out.println(displayAttempts(playerOne));
-            System.out.println("У " + playerTwo.getName() + " закончились попытки");
-            System.out.println(displayAttempts(playerTwo));
-        }
-        }
-        return true;
+        return false;
     }
-
-    private boolean isGameEnd() {
-        return playerOne.isAttemptsEnd() && playerTwo.isAttemptsEnd();
-    }
-
 
     private void enterNumber(Player player) {
         System.out.println("Введите число " + player.getName());
         player.setNumber(scan.nextInt());
     }
 
-    private boolean compareNumber(Player player) {
+    private boolean isNumberGuessedBy(Player player) {
         if (player.getNumber() == randomNumber) {
             System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " с " + player.getAttempts() + " попытки");
             return true;
@@ -71,16 +60,15 @@ public class GuessNumber {
         return false;
     }
 
-    private String displayAttempts(Player player) {
-        StringBuilder numbersStr = new StringBuilder();
-        int[] numbersTemp = player.getNumbers();
-        IntStream.range(0, player.getAttempts()).forEach(i -> {
-            numbersStr.append(numbersTemp[i]);
-            if (i < player.getAttempts()) {
-                numbersStr.append(" ");
-            }
-        });
-        return numbersStr.toString();
+    private void displayAttempts(Player player) {
+        for (int number:player.getNumbers()) {
+            System.out.print(number + " ");
+        }
+        System.out.println("");
+    }
+
+    private boolean isAttemptsEnd() {
+        return playerOne.isAttemptsEnd() && playerTwo.isAttemptsEnd();
     }
 
     private void resetGame() {
